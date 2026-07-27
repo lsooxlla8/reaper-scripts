@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<index version="1" name="lsooxlla8 REAPER Scripts" commit="7e6cf9e03235ee1f6484d3342429c0966de92081">
+<index version="1" name="icanscriptsounds" commit="7e6cf9e03235ee1f6484d3342429c0966de92081">
   <category name="Tracks">
     <reapack name="lsooxlla8_Smart Freeze Toggle.lua" type="script" desc="Smart Freeze Toggle (stereo)">
       <metadata>

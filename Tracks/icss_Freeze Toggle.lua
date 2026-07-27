@@ -1,4 +1,4 @@
--- @description Smart Freeze Toggle (stereo)
+-- @description Freeze Toggle
 -- @author lsooxlla8
 -- @version 1.0.0
 -- @changelog
