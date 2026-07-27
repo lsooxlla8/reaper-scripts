@@ -1,2 +1,55 @@
 <?xml version="1.0" encoding="utf-8"?>
-<index version="1" name="lsooxlla8 REAPER Scripts"/>
+<index version="1" name="lsooxlla8 REAPER Scripts" commit="7e6cf9e03235ee1f6484d3342429c0966de92081">
+  <category name="Tracks">
+    <reapack name="lsooxlla8_Smart Freeze Toggle.lua" type="script" desc="Smart Freeze Toggle (stereo)">
+      <metadata>
+        <description><![CDATA[{\rtf1\ansi\deff0{\fonttbl{\f0 \fswiss Helvetica;}{\f1 \fmodern Courier;}}
+{\colortbl;\red255\green0\blue0;\red0\green0\blue255;}
+\widowctrl\hyphauto
+
+{\pard \ql \f0 \sa180 \li0 \fi0 Toggles the freeze state of every selected track.\par}
+{\pard \ql \f0 \sa0 \li360 \fi-360 \bullet \tx360\tab Unfrozen track: freeze to stereo.\par}
+{\pard \ql \f0 \sa0 \li360 \fi-360 \bullet \tx360\tab Frozen track: unfreeze one freeze layer.\par}
+{\pard \ql \f0 \sa0 \li360 \fi-360 \bullet \tx360\tab Mixed multi-track selections are processed independently.\par}
+{\pard \ql \f0 \sa0 \li360 \fi-360 \bullet \tx360\tab The original track selection is restored afterwards.\sa180\par}
+}
+]]></description>
+      </metadata>
+      <version name="1.0.0" author="lsooxlla8" time="2026-07-27T01:03:30Z">
+        <changelog><![CDATA[Initial release]]></changelog>
+        <source main="main">https://github.com/lsooxlla8/reaper-scripts/raw/7e6cf9e03235ee1f6484d3342429c0966de92081/Tracks/lsooxlla8_Smart%20Freeze%20Toggle.lua</source>
+      </version>
+    </reapack>
+  </category>
+  <metadata>
+    <description><![CDATA[{\rtf1\ansi\deff0{\fonttbl{\f0 \fswiss Helvetica;}{\f1 \fmodern Courier;}}
+{\colortbl;\red255\green0\blue0;\red0\green0\blue255;}
+\widowctrl\hyphauto
+
+{\pard \ql \f0 \sa180 \li0 \fi0 \outlinelevel0 \b \fs36 lsooxlla8 REAPER Scripts\par}
+{\pard \ql \f0 \sa180 \li0 \fi0 A personal collection of scripts for {\field{\*\fldinst{HYPERLINK "https://www.reaper.fm/"}}{\fldrslt{\ul
+REAPER
+}}}
+, distributed through {\field{\*\fldinst{HYPERLINK "https://reapack.com/"}}{\fldrslt{\ul
+ReaPack
+}}}
+.\par}
+{\pard \ql \f0 \sa180 \li0 \fi0 \outlinelevel1 \b \fs32 Install with ReaPack\par}
+{\pard \ql \f0 \sa180 \li360 \fi-360 1.\tx360\tab In REAPER, open {\f1 Extensions > ReaPack > Import repositories...}.\par}
+{\pard \ql \f0 \sa180 \li360 \fi-360 2.\tx360\tab Paste this URL:\par}
+{\pard \ql \f0 \sa180 \li360 \fi0 \f1 https://raw.githubusercontent.com/lsooxlla8/reaper-scripts/main/index.xml\par}
+{\pard \ql \f0 \sa180 \li360 \fi-360 3.\tx360\tab Synchronize packages.\par}
+{\pard \ql \f0 \sa180 \li360 \fi-360 4.\tx360\tab Open {\f1 Extensions > ReaPack > Browse packages...}.\par}
+{\pard \ql \f0 \sa180 \li360 \fi-360 5.\tx360\tab Find and install the desired script.\sa180\par}
+{\pard \ql \f0 \sa180 \li0 \fi0 Installed scripts are registered in REAPER's Action List.\par}
+{\pard \ql \f0 \sa180 \li0 \fi0 \outlinelevel1 \b \fs32 Packages\par}
+{\pard \ql \f0 \sa180 \li0 \fi0 \outlinelevel2 \b \fs28 Smart Freeze Toggle (stereo)\par}
+{\pard \ql \f0 \sa180 \li0 \fi0 Toggles every selected track independently:\par}
+{\pard \ql \f0 \sa0 \li360 \fi-360 \bullet \tx360\tab unfrozen track \u8594 ? freeze to stereo;\par}
+{\pard \ql \f0 \sa0 \li360 \fi-360 \bullet \tx360\tab frozen track \u8594 ? unfreeze one freeze layer.\sa180\par}
+{\pard \ql \f0 \sa180 \li0 \fi0 The script preserves the original track selection and safely handles mixed selections containing both frozen and unfrozen tracks.\par}
+}
+]]></description>
+    <link rel="website" href="https://github.com/lsooxlla8/reaper-scripts">GitHub repository</link>
+  </metadata>
+</index>
