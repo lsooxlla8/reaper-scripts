@@ -1,4 +1,4 @@
-# lsooxlla8 REAPER Scripts
+# icanscriptsounds
 
 A personal collection of scripts for [REAPER](https://www.reaper.fm/), distributed through [ReaPack](https://reapack.com/).
 
@@ -8,7 +8,7 @@ A personal collection of scripts for [REAPER](https://www.reaper.fm/), distribut
 2. Paste this URL:
 
    ```text
-   https://raw.githubusercontent.com/lsooxlla8/reaper-scripts/main/index.xml
+   https://raw.githubusercontent.com/lsooxlla8/icanscriptsounds/main/index.xml
    ```
 
 3. Synchronize packages.
@@ -19,7 +19,7 @@ Installed scripts are registered in REAPER's Action List.
 
 ## Packages
 
-### Smart Freeze Toggle (stereo)
+### Freeze Toggle
 
 Toggles every selected track independently:
 
