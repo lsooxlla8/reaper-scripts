@@ -1,8 +1,8 @@
 -- @description Freeze Toggle
 -- @author lsooxlla8
--- @version 1.0.0
+-- @version 1.0.1
 -- @changelog
---   Initial release
+--   Complete the rename to Freeze Toggle
 -- @about
 --   Toggles the freeze state of every selected track.
 --
@@ -19,7 +19,7 @@ local selected_count = reaper.CountSelectedTracks(0)
 if selected_count == 0 then
   reaper.ShowMessageBox(
     "Select at least one track.",
-    "Smart Freeze Toggle",
+    "Freeze Toggle",
     0
   )
   return
