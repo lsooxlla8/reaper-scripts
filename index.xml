@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<index version="1" name="icanscriptsounds" commit="02b1fb35ef83fe39bf4a59798457f4a8f1f9b9fe">
+<index version="1" name="icanscriptsounds" commit="89e1973091b691109d793a2fac7b70ba96fba329">
   <category name="Tracks">
     <reapack name="icss_Freeze Toggle.lua" type="script" desc="Freeze Toggle">
       <metadata>
@@ -18,6 +18,10 @@
       <version name="1.0.0" author="lsooxlla8" time="2026-07-27T01:18:35Z">
         <changelog><![CDATA[Initial release]]></changelog>
         <source main="main">https://github.com/lsooxlla8/icanscriptsounds/raw/02b1fb35ef83fe39bf4a59798457f4a8f1f9b9fe/Tracks/icss_Freeze%20Toggle.lua</source>
+      </version>
+      <version name="1.0.1" author="lsooxlla8" time="2026-07-27T01:24:21Z">
+        <changelog><![CDATA[Complete the rename to Freeze Toggle]]></changelog>
+        <source main="main">https://github.com/lsooxlla8/icanscriptsounds/raw/89e1973091b691109d793a2fac7b70ba96fba329/Tracks/icss_Freeze%20Toggle.lua</source>
       </version>
     </reapack>
   </category>
