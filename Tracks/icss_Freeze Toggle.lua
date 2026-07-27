@@ -1,8 +1,8 @@
 -- @description Freeze Toggle
--- @author lsooxlla8
--- @version 1.0.1
+-- @author icanseesounds
+-- @version 1.0.2
 -- @changelog
---   Complete the rename to Freeze Toggle
+--   Update the ReaPack author name
 -- @about
 --   Toggles the freeze state of every selected track.
 --
