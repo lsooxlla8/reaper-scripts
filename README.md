@@ -30,20 +30,20 @@ The script preserves the original track selection and safely handles mixed selec
 
 ### Smart Freeze Toggle
 
-Measures the post-FX response at the actual end of each selected track's
-material, including material feeding it through receives or folder routing,
-before freezing:
+Toggles every selected track independently:
 
-- audio tracks are tested with a temporary 10 ms broadband-noise burst;
-- instrument tracks are detected automatically and tested with a short MIDI
-  note;
-- one second of safety is added after the measured response;
-- a track is left unfrozen, with a warning, if its response needs more than
-  five seconds or never reaches silence.
+- unfrozen track → measure a safe post-FX tail, then freeze to stereo;
+- frozen track → unfreeze one freeze layer.
 
-The script renders only the short diagnostic window, then removes the test
-signal, temporary stem, and rendered measurement file before REAPER's native
-stereo freeze runs. Running the script on an already frozen track invokes
-REAPER's native unfreeze action. The script requires the
-[SWS/S&M extension](https://www.sws-extension.org/) so it can temporarily
-change the freeze-tail preference and restore the user's original value.
+The script safely handles mixed selections and requires the
+[SWS/S&M extension](https://www.sws-extension.org/).
+
+### Smart Toggle FX Window
+
+Toggles the FX window of the selected track:
+
+- closed window → close all track FX windows, then open its FX chain;
+- open window → close all track FX windows.
+
+The script supports normal tracks, the master track, FX chains, floating FX,
+and empty FX chains.

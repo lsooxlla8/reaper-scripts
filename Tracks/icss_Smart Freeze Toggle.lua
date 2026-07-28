@@ -1,24 +1,16 @@
 -- @description Smart Freeze Toggle
 -- @author icanseesounds
--- @version 1.0.0
+-- @version 1.0.1
 -- @changelog
---   Initial release
+--   Simplify the ReaPack description
 -- @about
---   Toggles the freeze state of every selected track and measures a suitable
---   freeze tail at the actual end of the track material.
+--   Toggles the freeze state of every selected track.
 --
---   * Audio track: measures the post-FX response to a 10 ms noise burst.
---   * Instrument track: measures the post-FX response to a short MIDI note.
---   * Renders only the short diagnostic window, then removes its temporary
---     stem before running REAPER's native freeze.
---   * Adds one second of safety after the measured response.
---   * Refuses to freeze instead of truncating when the required tail is longer
---     than five seconds or never reaches silence.
+--   * Unfrozen track: measure a safe post-FX tail, then freeze to stereo.
 --   * Frozen track: unfreezes one freeze layer.
 --   * Mixed multi-track selections are processed independently.
 --
---   Requires the free SWS/S&M extension to temporarily set and then restore
---   REAPER's global freeze-tail preference.
+--   Requires the free SWS/S&M extension.
 
 local SCRIPT_NAME = "Smart Freeze Toggle"
 local CMD_FREEZE_TO_STEREO = 41223
