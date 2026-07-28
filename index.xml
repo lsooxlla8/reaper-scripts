@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<index version="1" name="icanscriptsounds" commit="1338645fc49f8733beda9b302cd6ab358ad29b9b">
+<index version="1" name="icanscriptsounds" commit="29bce53a48736855679d483e2996eb0a8344374a">
   <category name="Tracks">
     <reapack name="icss_Freeze Toggle.lua" type="script" desc="Freeze Toggle">
       <metadata>
@@ -34,21 +34,39 @@
 {\colortbl;\red255\green0\blue0;\red0\green0\blue255;}
 \widowctrl\hyphauto
 
-{\pard \ql \f0 \sa180 \li0 \fi0 Toggles the freeze state of every selected track and measures a suitable freeze tail at the actual end of the track material.\par}
-{\pard \ql \f0 \sa0 \li360 \fi-360 \bullet \tx360\tab Audio track: measures the post-FX response to a 10 ms noise burst.\par}
-{\pard \ql \f0 \sa0 \li360 \fi-360 \bullet \tx360\tab Instrument track: measures the post-FX response to a short MIDI note.\par}
-{\pard \ql \f0 \sa0 \li360 \fi-360 \bullet \tx360\tab Renders only the short diagnostic window, then removes its temporary stem before running REAPER's native freeze.\par}
-{\pard \ql \f0 \sa0 \li360 \fi-360 \bullet \tx360\tab Adds one second of safety after the measured response.\par}
-{\pard \ql \f0 \sa0 \li360 \fi-360 \bullet \tx360\tab Refuses to freeze instead of truncating when the required tail is longer than five seconds or never reaches silence.\par}
+{\pard \ql \f0 \sa180 \li0 \fi0 Toggles the freeze state of every selected track.\par}
+{\pard \ql \f0 \sa0 \li360 \fi-360 \bullet \tx360\tab Unfrozen track: measure a safe post-FX tail, then freeze to stereo.\par}
 {\pard \ql \f0 \sa0 \li360 \fi-360 \bullet \tx360\tab Frozen track: unfreezes one freeze layer.\par}
 {\pard \ql \f0 \sa0 \li360 \fi-360 \bullet \tx360\tab Mixed multi-track selections are processed independently.\sa180\par}
-{\pard \ql \f0 \sa180 \li0 \fi0 Requires the free SWS/S&M extension to temporarily set and then restore REAPER's global freeze-tail preference.\par}
+{\pard \ql \f0 \sa180 \li0 \fi0 Requires the free SWS/S&M extension.\par}
 }
 ]]></description>
       </metadata>
       <version name="1.0.0" author="icanseesounds" time="2026-07-27T13:30:13Z">
         <changelog><![CDATA[Initial release]]></changelog>
         <source main="main">https://github.com/lsooxlla8/icanscriptsounds/raw/1338645fc49f8733beda9b302cd6ab358ad29b9b/Tracks/icss_Smart%20Freeze%20Toggle.lua</source>
+      </version>
+      <version name="1.0.1" author="icanseesounds" time="2026-07-28T20:54:11Z">
+        <changelog><![CDATA[Simplify the ReaPack description]]></changelog>
+        <source main="main">https://github.com/lsooxlla8/icanscriptsounds/raw/29bce53a48736855679d483e2996eb0a8344374a/Tracks/icss_Smart%20Freeze%20Toggle.lua</source>
+      </version>
+    </reapack>
+    <reapack name="icss_Smart Toggle FX Window.lua" type="script" desc="Smart Toggle FX Window">
+      <metadata>
+        <description><![CDATA[{\rtf1\ansi\deff0{\fonttbl{\f0 \fswiss Helvetica;}{\f1 \fmodern Courier;}}
+{\colortbl;\red255\green0\blue0;\red0\green0\blue255;}
+\widowctrl\hyphauto
+
+{\pard \ql \f0 \sa180 \li0 \fi0 Toggles the FX window of the selected track.\par}
+{\pard \ql \f0 \sa0 \li360 \fi-360 \bullet \tx360\tab Closed window: close all track FX windows, then open its FX chain.\par}
+{\pard \ql \f0 \sa0 \li360 \fi-360 \bullet \tx360\tab Open window: close all track FX windows.\par}
+{\pard \ql \f0 \sa0 \li360 \fi-360 \bullet \tx360\tab Supports normal tracks, the master track, and floating FX.\sa180\par}
+}
+]]></description>
+      </metadata>
+      <version name="2.3.0" author="icanseesounds" time="2026-07-28T20:54:11Z">
+        <changelog><![CDATA[Initial ReaPack release]]></changelog>
+        <source main="main">https://github.com/lsooxlla8/icanscriptsounds/raw/29bce53a48736855679d483e2996eb0a8344374a/Tracks/icss_Smart%20Toggle%20FX%20Window.lua</source>
       </version>
     </reapack>
   </category>
@@ -80,15 +98,18 @@ ReaPack
 {\pard \ql \f0 \sa0 \li360 \fi-360 \bullet \tx360\tab frozen track \u8594 ? unfreeze one freeze layer.\sa180\par}
 {\pard \ql \f0 \sa180 \li0 \fi0 The script preserves the original track selection and safely handles mixed selections containing both frozen and unfrozen tracks.\par}
 {\pard \ql \f0 \sa180 \li0 \fi0 \outlinelevel2 \b \fs28 Smart Freeze Toggle\par}
-{\pard \ql \f0 \sa180 \li0 \fi0 Measures the post-FX response at the actual end of each selected track's material, including material feeding it through receives or folder routing, before freezing:\par}
-{\pard \ql \f0 \sa0 \li360 \fi-360 \bullet \tx360\tab audio tracks are tested with a temporary 10 ms broadband-noise burst;\par}
-{\pard \ql \f0 \sa0 \li360 \fi-360 \bullet \tx360\tab instrument tracks are detected automatically and tested with a short MIDI note;\par}
-{\pard \ql \f0 \sa0 \li360 \fi-360 \bullet \tx360\tab one second of safety is added after the measured response;\par}
-{\pard \ql \f0 \sa0 \li360 \fi-360 \bullet \tx360\tab a track is left unfrozen, with a warning, if its response needs more than five seconds or never reaches silence.\sa180\par}
-{\pard \ql \f0 \sa180 \li0 \fi0 The script renders only the short diagnostic window, then removes the test signal, temporary stem, and rendered measurement file before REAPER's native stereo freeze runs. Running the script on an already frozen track invokes REAPER's native unfreeze action. The script requires the {\field{\*\fldinst{HYPERLINK "https://www.sws-extension.org/"}}{\fldrslt{\ul
+{\pard \ql \f0 \sa180 \li0 \fi0 Toggles every selected track independently:\par}
+{\pard \ql \f0 \sa0 \li360 \fi-360 \bullet \tx360\tab unfrozen track \u8594 ? measure a safe post-FX tail, then freeze to stereo;\par}
+{\pard \ql \f0 \sa0 \li360 \fi-360 \bullet \tx360\tab frozen track \u8594 ? unfreeze one freeze layer.\sa180\par}
+{\pard \ql \f0 \sa180 \li0 \fi0 The script safely handles mixed selections and requires the {\field{\*\fldinst{HYPERLINK "https://www.sws-extension.org/"}}{\fldrslt{\ul
 SWS/S&M extension
 }}}
- so it can temporarily change the freeze-tail preference and restore the user's original value.\par}
+.\par}
+{\pard \ql \f0 \sa180 \li0 \fi0 \outlinelevel2 \b \fs28 Smart Toggle FX Window\par}
+{\pard \ql \f0 \sa180 \li0 \fi0 Toggles the FX window of the selected track:\par}
+{\pard \ql \f0 \sa0 \li360 \fi-360 \bullet \tx360\tab closed window \u8594 ? close all track FX windows, then open its FX chain;\par}
+{\pard \ql \f0 \sa0 \li360 \fi-360 \bullet \tx360\tab open window \u8594 ? close all track FX windows.\sa180\par}
+{\pard \ql \f0 \sa180 \li0 \fi0 The script supports normal tracks, the master track, FX chains, floating FX, and empty FX chains.\par}
 }
 ]]></description>
     <link rel="website" href="https://github.com/lsooxlla8/icanscriptsounds">GitHub repository</link>
